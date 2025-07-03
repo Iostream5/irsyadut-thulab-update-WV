@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no shrink-to-fit=no">
+   <title>Irsyadut Thulab | Hadits Pilihan</title>
+
+
+   <link rel="shortcut icon" href="../assets/icon/hadits.png" />
+
+   <link rel="stylesheet" href="../assets/css/core/libs.min.css" />
+   <link rel="stylesheet" href="../assets/vendor/aos/dist/aos.css" />
+   <link rel="stylesheet" href="../assets/css/hope-ui.min.css?v=2.0.0" />
+   <link rel="stylesheet" href="../assets/css/custom.min.css?v=2.0.0" />
+   <link rel="stylesheet" href="../assets/css/dark.min.css" />
+   <link rel="stylesheet" href="../assets/css/customizer.min.css" />
+   <link rel="stylesheet" href="../assets/css/rtl.min.css" />
+</head>
+<style>
+   .circle-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0;
+   }
+
+   .circle-background {
+      fill: none;
+      stroke: #f0f0f0;
+      stroke-width: 12;
+   }
+
+   .circle-foreground {
+      fill: none;
+      stroke: #0277d8;
+      stroke-width: 12;
+      stroke-linecap: round;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+      stroke-dasharray: 440;
+      /* Perimeter lingkaran (2 * PI * r) */
+      stroke-dashoffset: 440;
+      /* Full circumference untuk animasi */
+      transition: stroke-dashoffset 1s linear;
+      filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
+   }
+
+   .countdown-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      font-weight: bold;
+      color: #212529;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+   }
+
+   .circle-container h2 {
+      font-size: 16px;
+      margin-bottom: 5px;
+   }
+
+   table td,
+   table th {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+   }
+
+   tbody td {
+      font-weight: 500;
+      color: #999999;
+   }
+
+   .card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   }
+
+   .countdown {
+      font-size: 20px;
+      font-weight: bold;
+      color: #28a745;
+   }
+</style>
+
+<body class="  ">
+   <div id="loading">
+      <div class="loader simple-loader">
+         <div class="loader-body"></div>
+      </div>
+   </div>
+   <aside id="body-sidebar" class="sidebar sidebar-default sidebar-white sidebar-base navs-rounded-all">
+      <script type="module" src="../components/body-sidebar.js"></script>
+   </aside>
+   <main class="main-content" style="height: 85vh;">
+      <div id="main-cs-btn" class="position-relative iq-banner">
+
+         <script src="../components/main-cs-btn.js"></script>
+         <nav class="nav navbar navbar-expand-lg navbar-light iq-navbar position-fixed" style="width: 100%; top: 0;">
+            <div class="container-fluid navbar-inner">
+               <a href="../dashboard/index.html" class="navbar-brand ms-auto me-auto">
+                  <!--Logo start-->
+                  <!--logo End-->
+
+                  <!--Logo start-->
+                  <div class="logo-main">
+                     <div class="logo-normal">
+                        <img src="../assets/logo.png" height="40px" alt="">
+                     </div>
+                     <div class="logo-mini">
+                        <img src="../assets/logo.png" height="40px" alt="">
+                     </div>
+                  </div>
+                  <!--logo End-->
+
+                  <h4 class="logo-title irsyad">Irsyadut Thulab</h4>
+               </a>
+               <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
+                  <i class="icon">
+                     <img src="../assets/icon/bar.png" class="icon-20" alt="">
+                  </i>
+               </div>
+            </div>
+         </nav>
+
+
+         <div class="iq-navbar-header" style="height: 200px;">
+            <div class="container-fluid iq-container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="flex-wrap  text-center">
+                        <div class="d-flex justify-content-center gap-2 align-items-center">
+                           <img src="../assets/icon/hadits.png" height="40px" alt="" />
+                           <h2 class="mx-lg-5 fs-lg-1"> Hadits Hadits </h2>
+                           <img src="../assets/icon/hadits.png" height="40px" alt="" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="iq-header-img">
+               <img src="../assets/images/dashboard/solat.jpg" alt="header"
+                  class="theme-color-default-img img-fluid w-100 h-100 animated-scaleX" />
+               <img src="../assets/images/dashboard/top-header1.png" alt="header"
+                  class="theme-color-purple-img img-fluid w-100 h-100 animated-scaleX" />
+               <img src="../assets/images/dashboard/top-header2.png" alt="header"
+                  class="theme-color-blue-img img-fluid w-100 h-100 animated-scaleX" />
+               <img src="../assets/images/dashboard/top-header3.png" alt="header"
+                  class="theme-color-green-img img-fluid w-100 h-100 animated-scaleX" />
+               <img src="../assets/images/dashboard/top-header4.png" alt="header"
+                  class="theme-color-yellow-img img-fluid w-100 h-100 animated-scaleX" />
+               <img src="../assets/images/dashboard/top-header5.png" alt="header"
+                  class="theme-color-pink-img img-fluid w-100 h-100 animated-scaleX" />
+            </div>
+         </div>
+
+
+      </div>
+      <div class="container mt-n5 p-2">
+         <div class="overflow-hidden d-slider1">
+            <div class="card p-3 text-center" data-aos="fade-up" data-aos-delay="800">
+               <h1 class="text-center fw-bold p-4">Hadits Pilihan</h1>
+               <ul class="list-group list-group-flush text-center">
+                  <a class="list-group-item list-group-item-action" href="hadits/hadits1.html">
+                     Akhlak dan Adab</a>
+                  <a class="list-group-item list-group-item-action" href="hadits/hadits2.html">
+                     Doa dan Ibadah</a>
+                  <a class="list-group-item list-group-item-action" href="hadits/hadits3.html">
+                     Pendidikan dan Pengajaran</a>
+                  <a class="list-group-item list-group-item-action" href="hadits/hadits4.html">
+                     Sikap Terhadap Sesama</a>
+                  <a class="list-group-item list-group-item-action" href="hadits/hadits5.html">
+                     Akhlaq Mulia dan Etika</a>
+               </ul>
+            </div>
+         </div>
+      </div>
+      </div>
+
+
+   </main>
+   <footer class="footer">
+      <div class="footer-body">
+         <ul class="left-panel list-inline mb-0 p-0">
+            <li class="list-inline-item">
+               <img src="../assets/logo altie putih.png" height="20px" alt="">
+               <a href="https://smk-alittihad.sch.id/">SMKS Al Ittihad</a>
+            </li>
+         </ul>
+         <div class="right-panel">
+            Copyright
+            ©
+            <script>
+               document.write(new Date().getFullYear());
+            </script> SMK Al-Ittihad.
+            by <a href="index.html">TEFATIE</a>.
+         </div>
+      </div>
+   </footer>
+   <div class="justify-content-arround"></div>
+   <script src="../assets/js/core/libs.min.js"></script>
+   <script src="../assets/js/core/external.min.js"></script>
+   <script src="../assets/js/charts/widgetcharts.js"></script>
+   <script src="../assets/js/charts/vectore-chart.js"></script>
+   <script src="../assets/js/charts/dashboard.js"></script>
+   <script src="../assets/js/plugins/fslightbox.js"></script>
+   <script src="../assets/js/plugins/setting.js"></script>
+   <script src="../assets/js/plugins/slider-tabs.js"></script>
+   <script src="../assets/js/plugins/form-wizard.js"></script>
+   <script src="../assets/vendor/aos/dist/aos.js"></script>
+   <script src="../assets/js/hope-ui.js" defer></script>
+</body>
+
+</html>
