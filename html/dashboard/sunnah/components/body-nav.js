@@ -2,7 +2,7 @@ const body_nav = document.getElementById('body-nav')
 
 body_nav.insertAdjacentHTML('beforeend', `
 
-          <a href="../index.html" class="navbar-brand ms-auto me-auto me-auto">
+          <a href="../../index.html" class="navbar-brand ms-auto me-auto me-auto">
             <div class="logo-main">
               <div class="logo-normal">
                 <img src="../../../assets/logo.png" height="40px" alt="" />

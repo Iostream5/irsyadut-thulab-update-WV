@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no shrink-to-fit=no">
@@ -20,11 +21,13 @@
         height: 200px;
         margin: 0;
     }
+
     .circle-background {
         fill: none;
         stroke: #f0f0f0;
         stroke-width: 12;
     }
+
     .circle-foreground {
         fill: none;
         stroke: #0277d8;
@@ -33,12 +36,11 @@
         transform: rotate(-90deg);
         transform-origin: 50% 50%;
         stroke-dasharray: 440;
-        /* Perimeter lingkaran (2 * PI * r) */
         stroke-dashoffset: 440;
-        /* Full circumference untuk animasi */
         transition: stroke-dashoffset 1s linear;
         filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
     }
+
     .countdown-text {
         position: absolute;
         top: 50%;
@@ -49,29 +51,35 @@
         color: #212529;
         text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     }
+
     .circle-container h2 {
         font-size: 16px;
         margin-bottom: 5px;
     }
+
     table td,
     table th {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
     }
+
     tbody td {
         font-weight: 500;
         color: #999999;
     }
+
     .card {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+
     .countdown {
         font-size: 20px;
         font-weight: bold;
         color: #28a745;
     }
 </style>
+
 <body class="  ">
     <div id="loading">
         <div class="loader simple-loader">
@@ -104,16 +112,6 @@
                 <div class="iq-header-img">
                     <img src="../assets/images/dashboard/solat.jpg" alt="header"
                         class="theme-color-default-img img-fluid w-100 h-100 animated-scaleX" />
-                    <img src="../assets/images/dashboard/top-header1.png" alt="header"
-                        class="theme-color-purple-img img-fluid w-100 h-100 animated-scaleX" />
-                    <img src="../assets/images/dashboard/top-header2.png" alt="header"
-                        class="theme-color-blue-img img-fluid w-100 h-100 animated-scaleX" />
-                    <img src="../assets/images/dashboard/top-header3.png" alt="header"
-                        class="theme-color-green-img img-fluid w-100 h-100 animated-scaleX" />
-                    <img src="../assets/images/dashboard/top-header4.png" alt="header"
-                        class="theme-color-yellow-img img-fluid w-100 h-100 animated-scaleX" />
-                    <img src="../assets/images/dashboard/top-header5.png" alt="header"
-                        class="theme-color-pink-img img-fluid w-100 h-100 animated-scaleX" />
                 </div>
             </div>
         </div>
@@ -160,7 +158,7 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {
-                navigator.serviceWorker.register('/service-worker.js')
+                navigator.serviceWorker.register('./service-worker.js')
                     .then(function (registration) {
                         console.log('ServiceWorker registration successful with scope: ', registration.scope);
                     }).catch(function (error) {
@@ -202,7 +200,6 @@
                     break;
                 }
             }
-            // Jika tidak ada sholat yang akan datang, set waktu sholat Fajr keesokan harinya
             if (!nextSholat) {
                 nextSholat = { sholat: 'Subuh', waktu: waktuSholat.Fajr + ' (Besok)' };
             }
@@ -231,7 +228,6 @@
                 }, 1000);
             }
         }
-        // document.addEventListener('deviceready', function () {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(async (position) => {
                 const latitude = position.coords.latitude;
@@ -246,10 +242,9 @@
         } else {
             alert("Geolocation tidak didukung oleh browser ini.");
         }
-        // });
         function displayPrayerTimes(waktuSholat) {
             const container = document.getElementById('waktu-sholat');
-            container.innerHTML = ''; // Kosongkan kontainer sebelum menambahkan waktu sholat
+            container.innerHTML = '';
             for (const [sholat, waktu] of Object.entries(waktuSholat)) {
                 const sholatDiv = document.createElement('div');
                 sholatDiv.classList.add('sholat-item');
@@ -274,4 +269,5 @@
     <script src="../assets/vendor/aos/dist/aos.js"></script>
     <script src="../assets/js/hope-ui.js" defer></script>
 </body>
+
 </html>

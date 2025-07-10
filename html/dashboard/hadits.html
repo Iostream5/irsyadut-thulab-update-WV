@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no shrink-to-fit=no">
@@ -20,11 +21,13 @@
       height: 200px;
       margin: 0;
    }
+
    .circle-background {
       fill: none;
       stroke: #f0f0f0;
       stroke-width: 12;
    }
+
    .circle-foreground {
       fill: none;
       stroke: #0277d8;
@@ -39,6 +42,7 @@
       transition: stroke-dashoffset 1s linear;
       filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
    }
+
    .countdown-text {
       position: absolute;
       top: 50%;
@@ -49,29 +53,35 @@
       color: #212529;
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
    }
+
    .circle-container h2 {
       font-size: 16px;
       margin-bottom: 5px;
    }
+
    table td,
    table th {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
    }
+
    tbody td {
       font-weight: 500;
       color: #999999;
    }
+
    .card {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
    }
+
    .countdown {
       font-size: 20px;
       font-weight: bold;
       color: #28a745;
    }
 </style>
+
 <body class="  ">
    <div id="loading">
       <div class="loader simple-loader">
@@ -84,29 +94,8 @@
    <main class="main-content" style="height: 85vh;">
       <div id="main-cs-btn" class="position-relative iq-banner">
          <script src="../components/main-cs-btn.js"></script>
-         <nav class="nav navbar navbar-expand-lg navbar-light iq-navbar position-fixed" style="width: 100%; top: 0;">
-            <div class="container-fluid navbar-inner">
-               <a href="../dashboard/index.html" class="navbar-brand ms-auto me-auto">
-                  <!--Logo start-->
-                  <!--logo End-->
-                  <!--Logo start-->
-                  <div class="logo-main">
-                     <div class="logo-normal">
-                        <img src="../assets/logo.png" height="40px" alt="">
-                     </div>
-                     <div class="logo-mini">
-                        <img src="../assets/logo.png" height="40px" alt="">
-                     </div>
-                  </div>
-                  <!--logo End-->
-                  <h4 class="logo-title irsyad">Irsyadut Thulab</h4>
-               </a>
-               <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
-                  <i class="icon">
-                     <img src="../assets/icon/bar.png" class="icon-20" alt="">
-                  </i>
-               </div>
-            </div>
+         <nav id="body-nav" class="nav navbar navbar-expand-lg navbar-light iq-navbar">
+            <script type="module" src="../components/body-nav.js"></script>
          </nav>
          <div class="iq-navbar-header" style="height: 200px;">
             <div class="container-fluid iq-container">
@@ -165,4 +154,5 @@
    <script src="../assets/vendor/aos/dist/aos.js"></script>
    <script src="../assets/js/hope-ui.js" defer></script>
 </body>
+
 </html>

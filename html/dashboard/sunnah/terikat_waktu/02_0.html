@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no shrink-to-fit=no">
     <title>Irsyadut Thulab | Sunnah Ibadah | Sunnah Nabi</title>
     <link rel="shortcut icon" href="../../../assets/images/favicon.ico" />
-    <!-- Library / Plugin Css Build -->
     <link rel="stylesheet" href="../../../assets/css/core/libs.min.css" />
-    <!-- Aos Animation Css -->
     <link rel="stylesheet" href="../../../assets/vendor/aos/dist/aos.css" />
-    <!-- Hope Ui Design System Css -->
     <link rel="stylesheet" href="../../../assets/css/hope-ui.min.css?v=2.0.0" />
-    <!-- Custom Css -->
     <link rel="stylesheet" href="../../../assets/css/custom.min.css?v=2.0.0" />
-    <!-- Dark Css -->
     <link rel="stylesheet" href="../../../assets/css/dark.min.css" />
-    <!-- Customizer Css -->
     <link rel="stylesheet" href="../../../assets/css/customizer.min.css" />
-    <!-- RTL Css -->
     <link rel="stylesheet" href="../../../assets/css/rtl.min.css" />
 </head>
+
 <body class="  ">
     <div id="loading">
         <div class="loader simple-loader">
@@ -35,7 +30,7 @@
             <nav id="body-nav" class="nav navbar navbar-expand-lg navbar-light iq-navbar">
                 <script type="module" src="../components/body-nav.js"></script>
             </nav>
-            <div class="iq-navbar-header" style="margin-top: 70px">
+            <div class="iq-navbar-header" style="height: 150px">
                 <div class="container-fluid iq-container">
                     <div class="row">
                         <div class="col-md-12">
@@ -50,11 +45,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="iq-navbar-header">
-                    <div class="iq-header-img">
-                        <img src="../../../dashboard/img/nabi.jpg" alt="header"
-                            class="theme-color-default-img img-fluid w-100 h-70 animated-scaleX">
-                    </div>
+                <div class="iq-header-img">
+                    <img src="../../../dashboard/img/nabi.jpg" alt="header"
+                        class="theme-color-default-img img-fluid w-100 h-70 animated-scaleX">
                 </div>
             </div>
             <div class="m-0">
@@ -66,7 +59,6 @@
                             <li class="list-group-item list-group-item-light text-center">
                                 <h4 class="text-dark"><b>Daftar list</b></h4>
                             </li>
-                            <!-- Section 1 -->
                             <li class="list-group-item list-group-item-gray-dark">
                                 <h6 class="text-dark text-center" data-bs-toggle="collapse" href="#collapseSection1"
                                     role="button" aria-expanded="true" aria-controls="collapseSection1">
@@ -405,72 +397,28 @@
                     </div>
                 </div>
             </div>
-            </>
-            </>
-            </>
-            <script>
-                // Inisialisasi Scrollspy
-                const scrollSpy = new bootstrap.ScrollSpy(document.body, {
-                    target: '#list-example',
-                    offset: 70
-                });
-            </script>
-            </>
-            </>
             <button id="scrollToTop" class="scroll-to-top" style="display: none">
                 ↑طيران↑
             </button>
             <footer id="body-footer" class="footer">
                 <script src="../components/body-footer.js"></script>
             </footer>
-            <!-- Library Bundle Script -->
             <script src="../../../assets/js/core/libs.min.js"></script>
-            <!-- External Library Bundle Script -->
             <script src="../../../assets/js/core/external.min.js"></script>
-            <!-- Widgetchart Script -->
             <script src="../../../assets/js/charts/widgetcharts.js"></script>
-            <!-- mapchart Script -->
             <script src="../../../assets/js/charts/vectore-chart.js"></script>
             <script src="../../../assets/js/charts/dashboard.js"></script>
-            <!-- fslightbox Script -->
             <script src="../../../assets/js/plugins/fslightbox.js"></script>
-            <!-- Settings Script -->
             <script src="../../../assets/js/plugins/setting.js"></script>
-            <!-- Slider-tab Script -->
             <script src="../../../assets/js/plugins/slider-tabs.js"></script>
-            <!-- Form Wizard Script -->
             <script src="../../../assets/js/plugins/form-wizard.js"></script>
-            <!-- AOS Animation Plugin-->
             <script src="../../../assets/vendor/aos/dist/aos.js"></script>
-            <!-- App Script -->
             <script src="../../../assets/js/hope-ui.js" defer></script>
             <script>
                 document.addEventListener('backbutton', function () {
                     window.location.href = '../../sunnah.html'
                 });
             </script>
-            <script>
-                const scrollToTopButton = document.getElementById("scrollToTop");
-                // Tampilkan tombol ketika halaman di-scroll ke bawah
-                window.onscroll = function () {
-                    if (
-                        document.body.scrollTop > 200 ||
-                        document.documentElement.scrollTop > 200
-                    ) {
-                        scrollToTopButton.style.display = "block";
-                    } else {
-                        scrollToTopButton.style.display = "none";
-                    }
-                };
-                // Saat tombol diklik, scroll ke atas
-                scrollToTopButton.addEventListener("click", function () {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth",
-                    });
-                });
-            </script>
-            <!-- Google Tag Manager -->
             <script>
                 (function (w, d, s, l, i) {
                     w[l] = w[l] || [];
@@ -485,8 +433,8 @@
                 window.tag_manager_event = "dashboard-free-preview";
                 window.tag_manager_product = "HopeUI";
             </script>
-            <!-- End Google Tag Manager -->
         </div>
     </main>
 </body>
+
 </html>

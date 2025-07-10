@@ -48,7 +48,7 @@
                 <script type="module" src="../components/body-nav.js"></script>
             </nav>
 
-            <div class="iq-navbar-header" style="margin-top: 70px">
+            <div class="iq-navbar-header" style="height: 150px">
                 <div class="container-fluid iq-container">
                     <div class="row">
                         <div class="col-md-12">
@@ -226,29 +226,7 @@
                     window.location.href = '../../sunnah.html'
                 });
             </script>
-            <script>
-                const scrollToTopButton = document.getElementById("scrollToTop");
 
-                // Tampilkan tombol ketika halaman di-scroll ke bawah
-                window.onscroll = function () {
-                    if (
-                        document.body.scrollTop > 200 ||
-                        document.documentElement.scrollTop > 200
-                    ) {
-                        scrollToTopButton.style.display = "block";
-                    } else {
-                        scrollToTopButton.style.display = "none";
-                    }
-                };
-
-                // Saat tombol diklik, scroll ke atas
-                scrollToTopButton.addEventListener("click", function () {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth",
-                    });
-                });
-            </script>
             <!-- Google Tag Manager -->
             <script>
                 (function (w, d, s, l, i) {
