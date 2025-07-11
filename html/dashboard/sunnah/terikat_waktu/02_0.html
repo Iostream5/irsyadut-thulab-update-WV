@@ -415,11 +415,6 @@
             <script src="../../../assets/vendor/aos/dist/aos.js"></script>
             <script src="../../../assets/js/hope-ui.js" defer></script>
             <script>
-                document.addEventListener('backbutton', function () {
-                    window.location.href = '../../sunnah.html'
-                });
-            </script>
-            <script>
                 (function (w, d, s, l, i) {
                     w[l] = w[l] || [];
                     w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -435,6 +430,14 @@
             </script>
         </div>
     </main>
+    <script>
+        document.addEventListener('deviceready', function () {
+            document.addEventListener('backbutton', function (e) {
+                e.preventDefault();
+                window.location.href = '../../sunnah.html';
+            }, false);
+        }, false);
+    </script>
 </body>
 
 </html>

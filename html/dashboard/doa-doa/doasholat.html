@@ -404,6 +404,14 @@
         });
     </script>
 
+    <script>
+        document.addEventListener('deviceready', function () {
+            document.addEventListener('backbutton', function (e) {
+                e.preventDefault();
+                window.location.href = '../doa.html';
+            }, false);
+        }, false);
+    </script>
 </body>
 
 </html>

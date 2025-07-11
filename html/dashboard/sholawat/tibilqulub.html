@@ -102,9 +102,12 @@
   <script src="../../assets/vendor/aos/dist/aos.js"></script>
   <script src="../../assets/js/hope-ui.js" defer></script>
   <script>
-    document.addEventListener('backbutton', function () {
-      window.location.href = '../sholawat.html'
-    });
+    document.addEventListener('deviceready', function () {
+      document.addEventListener('backbutton', function (e) {
+        e.preventDefault();
+        window.location.href = '../sholawat.html';
+      }, false);
+    }, false);
   </script>
 </body>
 

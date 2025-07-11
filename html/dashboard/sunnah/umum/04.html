@@ -205,6 +205,14 @@
             </script>
         </div>
     </main>
+    <script>
+        document.addEventListener('deviceready', function () {
+            document.addEventListener('backbutton', function (e) {
+                e.preventDefault();
+                window.location.href = '../../sunnah.html';
+            }, false);
+        }, false);
+    </script>
 </body>
 
 </html>

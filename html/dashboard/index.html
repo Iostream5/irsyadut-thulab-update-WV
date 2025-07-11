@@ -1667,7 +1667,8 @@
                                  عَلٰى صِرَاطٍ مُّسْتَقِيْمٍۗ ۝٤تَنْزِيْلَ الْعَزِيْزِ الرَّحِيْمِۙ ۝٥
                               </p>
                               <div class=" text-center">
-                                 <a href="surat_alquran/yasin36.html" class="btn btn-sm btn-primary">Baca😊</a>
+                                 <a href="./surat_alquran/detail.html?surat=36"
+                                    class="btn btn-sm btn-primary">Baca😊</a>
                               </div>
                            </div>
                         </div>
@@ -1754,19 +1755,16 @@
    </main>
    <script>
       document.addEventListener('DOMContentLoaded', function () {
-         // Cek apakah alert sudah pernah ditampilkan sebelumnya
          if (!localStorage.getItem('alertShown')) {
             Swal.fire({
                title: 'Assalamualaikum',
                text: 'Mohon Bantu Kami Dengan Memberitahu Jika Ada Kesalahan Tulis🙏',
                confirmButtonText: 'Lanjut Ke Aplikasi'
             }).then((result) => {
-               // Simpan status alert telah ditampilkan
                localStorage.setItem('alertShown', 'true');
             });
          }
       });
-      // Event listener ketika aplikasi ditutup atau dibuka kembali
       document.addEventListener('pause', function () {
          localStorage.removeItem('alertShown');
       });
@@ -1778,27 +1776,23 @@
          var items = dropdownMenu.getElementsByTagName('li');
          let matchFound = false;
          let matchCount = 0;
-         const maxVisibleItems = 6; // Batas maksimal hasil pencarian yang ditampilkan
-         // Tampilkan dropdown hanya jika input tidak kosong
+         const maxVisibleItems = 6;
          if (searchInput !== "") {
             dropdownMenu.classList.add('show');
-            // Loop untuk cek setiap elemen li
             for (var i = 0; i < items.length; i++) {
                var itemText = items[i].innerText.toLowerCase();
-               // Jika teks di li cocok dengan input, tampilkan (maksimal 5 hasil)
                if (itemText.includes(searchInput)) {
                   if (matchCount < maxVisibleItems) {
                      items[i].style.display = "block";
                      matchFound = true;
                      matchCount++;
                   } else {
-                     items[i].style.display = "none"; // Sembunyikan jika lebih dari 5
+                     items[i].style.display = "none";
                   }
                } else {
                   items[i].style.display = "none";
                }
             }
-            // Jika tidak ada yang cocok, sembunyikan dropdown
             if (!matchFound) {
                dropdownMenu.classList.remove('show');
             }

@@ -5,29 +5,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no shrink-to-fit=no">
   <title>Irsyadut Thulab | Sunnah Ibadah | Sunnah Nabi</title>
-
-
   <link rel="shortcut icon" href="../../../assets/images/favicon.ico" />
-
-  <!-- Library / Plugin Css Build -->
   <link rel="stylesheet" href="../../../assets/css/core/libs.min.css" />
-
-  <!-- Aos Animation Css -->
   <link rel="stylesheet" href="../../../assets/vendor/aos/dist/aos.css" />
-
-  <!-- Hope Ui Design System Css -->
   <link rel="stylesheet" href="../../../assets/css/hope-ui.min.css?v=2.0.0" />
-
-  <!-- Custom Css -->
   <link rel="stylesheet" href="../../../assets/css/custom.min.css?v=2.0.0" />
-
-  <!-- Dark Css -->
   <link rel="stylesheet" href="../../../assets/css/dark.min.css" />
-
-  <!-- Customizer Css -->
   <link rel="stylesheet" href="../../../assets/css/customizer.min.css" />
-
-  <!-- RTL Css -->
   <link rel="stylesheet" href="../../../assets/css/rtl.min.css" />
 </head>
 <style>
@@ -65,7 +49,6 @@
       <nav id="body-nav" class="nav navbar navbar-expand-lg navbar-light iq-navbar">
         <script type="module" src="../components/body-nav.js"></script>
       </nav>
-
       <div class="iq-navbar-header" style="height: 150px">
         <div class="container-fluid iq-container">
           <div class="row">
@@ -97,7 +80,6 @@
           </div>
         </div>
       </div>
-
       <div class="m-0">
         <div data-bs-spy="" data-bs-target="#list-example" data-bs-offset="" tabindex="0">
           <div class="text-dark card p-3" data-aos="fade-up" data-aos-delay="900">
@@ -116,7 +98,6 @@
                   </h6>
                 </a>
               </li>
-              <!-- Section 1 -->
               <li class="list-group-item list-group-item-gray-dark">
                 <h6 class="text-dark text-center" data-bs-toggle="collapse" href="#collapseSection1" role="button"
                   aria-expanded="true" aria-controls="collapseSection1">
@@ -171,7 +152,6 @@
                 </a>
               </li>
             </ul>
-
             <div class="scrollspy-example h-auto" style="position: relative; overflow-y: auto">
               <div class="card-body text-dark">
                 <li id="list-item-1" class="text-center">
@@ -369,7 +349,6 @@
                   مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ اللَّهُمَّ
                   اجْعَلْنِى مِنَ التَّوَّابِينَ وَاجْعَلْنِى مِنَ
                   الْمُتَطَهِّرِينَ
-
                 </h4>
                 <p class="text-center">
                   Dalilnya adalah hadits yang diriwayatkan dari Umar
@@ -397,9 +376,7 @@
               </div>
             </div>
           </div>
-
           <script>
-            // Inisialisasi Scrollspy
             const scrollSpy = new bootstrap.ScrollSpy(document.body, {
               target: "#list-example",
               offset: 70,
@@ -407,56 +384,33 @@
           </script>
         </div>
       </div>
-
       <button id="scrollToTop" class="scroll-to-top" style="display: none">
         ↑طيران↑
       </button>
-
-
       <footer id="body-footer" class="footer">
         <script src="../components/body-footer.js"></script>
       </footer>
-
-      <!-- Library Bundle Script -->
       <script src="../../../assets/js/core/libs.min.js"></script>
-
-      <!-- External Library Bundle Script -->
       <script src="../../../assets/js/core/external.min.js"></script>
-
-      <!-- Widgetchart Script -->
       <script src="../../../assets/js/charts/widgetcharts.js"></script>
-
-      <!-- mapchart Script -->
       <script src="../../../assets/js/charts/vectore-chart.js"></script>
       <script src="../../../assets/js/charts/dashboard.js"></script>
-
-      <!-- fslightbox Script -->
       <script src="../../../assets/js/plugins/fslightbox.js"></script>
-
-      <!-- Settings Script -->
       <script src="../../../assets/js/plugins/setting.js"></script>
-
-      <!-- Slider-tab Script -->
       <script src="../../../assets/js/plugins/slider-tabs.js"></script>
-
-      <!-- Form Wizard Script -->
       <script src="../../../assets/js/plugins/form-wizard.js"></script>
-
-      <!-- AOS Animation Plugin-->
       <script src="../../../assets/vendor/aos/dist/aos.js"></script>
-
-      <!-- App Script -->
       <script src="../../../assets/js/hope-ui.js" defer></script>
-
       <script>
-        document.addEventListener('backbutton', function () {
-          window.location.href = '../../sunnah.html'
-        });
+        document.addEventListener('deviceready', function () {
+          document.addEventListener('backbutton', function (e) {
+            e.preventDefault();
+            window.location.href = '../../sunnah.html';
+          }, false);
+        }, false);
       </script>
       <script>
         const scrollToTopButton = document.getElementById("scrollToTop");
-
-        // Tampilkan tombol ketika halaman di-scroll ke bawah
         window.onscroll = function () {
           if (
             document.body.scrollTop > 200 ||
@@ -467,8 +421,6 @@
             scrollToTopButton.style.display = "none";
           }
         };
-
-        // Saat tombol diklik, scroll ke atas
         scrollToTopButton.addEventListener("click", function () {
           window.scrollTo({
             top: 0,
@@ -476,7 +428,6 @@
           });
         });
       </script>
-      <!-- Google Tag Manager -->
       <script>
         (function (w, d, s, l, i) {
           w[l] = w[l] || [];
@@ -491,7 +442,6 @@
         window.tag_manager_event = "dashboard-free-preview";
         window.tag_manager_product = "HopeUI";
       </script>
-      <!-- End Google Tag Manager -->
     </div>
   </main>
 </body>
