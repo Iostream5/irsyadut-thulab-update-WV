@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no shrink-to-fit=no">
@@ -15,26 +14,46 @@
    <link rel="stylesheet" href="../assets/vendor/aos/dist/aos.css" />
    <link rel="stylesheet" href="../assets/css/hope-ui.min.css?v=2.0.0" />
    <link rel="stylesheet" href="../assets/css/custom.min.css?v=2.0.0" />
-   <link rel="stylesheet" href="../assets/css/dark.min.css" />
    <link rel="stylesheet" href="../assets/css/customizer.min.css" />
-   <link rel="stylesheet" href="../assets/css/rtl.min.css" />
    <link rel="stylesheet" href="../assets/node_modules/sweetalert2/dist/sweetalert2.min.css">
    <link rel="stylesheet" href="../assets/fontawesome-free-6.6.0-web/css/all.min.css">
+   <script defer src="../assets/api/cdn.min.js"></script>
 </head>
 <style>
-   .long-text {
+   .truncate-multiline {
       display: -webkit-box;
-      line-clamp: 4;
+      -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
    }
-
+   .truncate-multiline-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+   }
    .dropdown-menu.show {
       display: block;
    }
+   .responsive-yt {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+   }
+   .responsive-yt iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+   }
 </style>
-
 <body class="  " data-aos-easing="ease" data-aos-duration="700" data-aos-delay="0">
    <div id="loading">
       <div class="loader simple-loader">
@@ -106,1461 +125,10 @@
                                        <span class="input-group-text border-0">
                                           <i class="fas fa-search"></i>
                                        </span>
-                                       <ul class="mt-5 dropdown-menu w-100 sticky-top position-absolute"
-                                          id="dropdownMenu" aria-labelledby="searchInput">
-                                          <li><a href="surat_alquran/alfatihah1.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Fatihah (7)</h5>
-                                                      <small><i>Pembukaan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/albaqarah2.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Baqarah (286)
-                                                      </h5>
-                                                      <small><i>Sapi</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alilmran3.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Ali-'Imran (200)
-                                                      </h5>
-                                                      <small><i>Keluarga Imran</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/annisa4.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">An-Nisa' (176)</h5>
-                                                      <small><i>Wanita</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/almaidah5.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Ma'idah (120)
-                                                      </h5>
-                                                      <small><i>Hidangan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alanam6.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-An'am (165)</h5>
-                                                      <small><i>Binatang Ternak</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alaraf7.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-A'raf (206)</h5>
-                                                      <small><i>Tempat Tertinggi</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alanfal8.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Anfal (75)</h5>
-                                                      <small><i>Rampasan Perang</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/attaubah9.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">At-Taubah (129)
-                                                      </h5>
-                                                      <small><i>Pengampunan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/yunus10.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Yunus (109)</h5>
-                                                      <small><i>Yunus</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/hud11.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Hud (123)</h5>
-                                                      <small><i>Hud</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/yusuf12.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Yusuf (111)</h5>
-                                                      <small><i>Yusuf</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/arrad13.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Ar-Ra'd (43)</h5>
-                                                      <small><i>Guruh</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/ibrahim14.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Ibrahim (52)</h5>
-                                                      <small><i>Ibrahim</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alhijr15.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Hijr (99)</h5>
-                                                      <small><i>Hijr</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/annahl16.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">An-Nahl (128)</h5>
-                                                      <small><i>Lebah</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alisra17.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Isra' (111)</h5>
-                                                      <small><i>Memperjalankan Malam Hari</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alkahfi18.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Kahfi (110)</h5>
-                                                      <small><i>Goa</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/maryam19.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Maryam (98)</h5>
-                                                      <small><i>Maryam</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/taha20.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Taha (135)</h5>
-                                                      <small><i>Taha</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alanbiya21.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Anbiya' (112)
-                                                      </h5>
-                                                      <small><i>Para Nabi</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alhajj22.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Hajj (78)</h5>
-                                                      <small><i>Haji</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/almuminun23.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Mu'minun (118)
-                                                      </h5>
-                                                      <small><i>Orang-Orang Mukmin</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/annur24.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">An-Nur (64)</h5>
-                                                      <small><i>Cahaya</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alfurqan25.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Furqan (77)</h5>
-                                                      <small><i>Pembeda</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/assyuara26.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Asy-Syu'ara' (227)
-                                                      </h5>
-                                                      <small><i>Para Penyair</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/annaml27.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">An-Naml (93)</h5>
-                                                      <small><i>Semut-semut</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alqasas28.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Qasas (88)</h5>
-                                                      <small><i>Kisah-Kisah</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alankabut29.html`" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-'Ankabut (69)
-                                                      </h5>
-                                                      <small><i>Laba-Laba</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/arrum30.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Ar-Rum (60)</h5>
-                                                      <small><i>Romawi</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/luqman31.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Luqman (34)</h5>
-                                                      <small><i>Luqman</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/assajdah32.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">As-Sajdah (30)</h5>
-                                                      <small><i>Sajdah</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alahzab33.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Ahzab (73)</h5>
-                                                      <small><i>Golongan Yang Bersekutu</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/saba34.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Saba' (54)</h5>
-                                                      <small><i>Saba'</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/fatir35.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Fatir (45)</h5>
-                                                      <small><i>Maha Pencipta</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/yasin36.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Yasin (83)</h5>
-                                                      <small><i>Yasin</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/assafat37.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">As-Saffat (182)
-                                                      </h5>
-                                                      <small><i>Barisan-Barisan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/sad38.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Sad (88)</h5>
-                                                      <small><i>Sad</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/azzumar39.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Az-Zumar (75)</h5>
-                                                      <small><i>Rombongan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/gafir40.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Gafir (85)</h5>
-                                                      <small><i>Maha Pengampun</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/fussilat41.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Fussilat (54)</h5>
-                                                      <small><i>Yang Dijelaskan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/assyura42.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Asy-Syura (53)</h5>
-                                                      <small><i>Musyawarah</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/azukhruf43.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Az-Zukhruf (89)
-                                                      </h5>
-                                                      <small><i>Perhiasan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/addukhan44.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Ad-Dukhan (59)</h5>
-                                                      <small><i>Kabut</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/aljasiyah45.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Jasiyah (37)
-                                                      </h5>
-                                                      <small><i>Berlutut</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alahqaf46.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Ahqaf (35)</h5>
-                                                      <small><i>Bukit Pasir</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/muhammad47.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Muhammad (38)</h5>
-                                                      <small><i>Muhammad</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alfath48.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Fath (29)</h5>
-                                                      <small><i>Kemenangan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alhujurat49.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Hujurat (18)
-                                                      </h5>
-                                                      <small><i>Kamar-Kamar</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/qaf50.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Qaf (45)</h5>
-                                                      <small><i>Qaf</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/azzariyat51.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Az-Zariyat (60)
-                                                      </h5>
-                                                      <small><i>Angin yang Menerbangkan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/attur52.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">At-Tur (49)</h5>
-                                                      <small><i>Bukit Tursina</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/annajm53.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">An-Najm (62)</h5>
-                                                      <small><i>Bintang</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alqamar54.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Qamar (55)</h5>
-                                                      <small><i>Bulan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/arrahman55.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Ar-Rahman (78)</h5>
-                                                      <small><i>Maha Pengasih</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alwaqiah56.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Waqi'ah (96)
-                                                      </h5>
-                                                      <small><i>Hari Kiamat</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alhadid57.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Hadid (29)</h5>
-                                                      <small><i>Besi</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/almujadalah58.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Mujadalah (22)
-                                                      </h5>
-                                                      <small><i>Gugatan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alhasyr59.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Hasyr (24)</h5>
-                                                      <small><i>Pengusiran</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/almumtahanah60.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Mumtahanah (13)
-                                                      </h5>
-                                                      <small><i>Wanita Yang Diuji</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/assaf61.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">As-Saff (14)</h5>
-                                                      <small><i>Barisan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/aljumuah62.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Jumu'ah (11)
-                                                      </h5>
-                                                      <small><i>Jumat</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/al-munafiqun63.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Munafiqun (11)
-                                                      </h5>
-                                                      <small><i>Orang-Orang Munafik</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/attagabun64.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">At-Tagabun (18)
-                                                      </h5>
-                                                      <small><i>Pengungkapan Kesalahan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/attalaq65.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">At-Talaq (12)</h5>
-                                                      <small><i>Talak</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/attahrim66.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">At-Tahrim (12)</h5>
-                                                      <small><i>Pengharaman</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/almulk67.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Mulk (30)</h5>
-                                                      <small><i>Kerajaan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alqalam68.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Qalam (52)</h5>
-                                                      <small><i>Pena</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alhaqqah69.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Haqqah (52)</h5>
-                                                      <small><i>Hari Kiamat</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/almaarij70.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Ma'arij (44)
-                                                      </h5>
-                                                      <small><i>Tempat Naik</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/nuh71.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Nuh (28)</h5>
-                                                      <small><i>Nuh</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/aljin72.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Jinn (28)</h5>
-                                                      <small><i>Jin</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/almuzamil73.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Muzzammil (20)
-                                                      </h5>
-                                                      <small><i>Orang Yang Berselimut</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/almudasir74.htm" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Muddassir (56)
-                                                      </h5>
-                                                      <small><i>Orang Yang Berkemul</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alqiyamah75.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Qiyamah (40)
-                                                      </h5>
-                                                      <small><i>Hari Kiamat</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alinsan76.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Insan (31)</h5>
-                                                      <small><i>Manusia</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/almursalat77.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Mursalat (50)
-                                                      </h5>
-                                                      <small><i>Malaikat Yang Diutus</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/annaba78.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">An-Naba' (40)</h5>
-                                                      <small><i>Berita Besar</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/annaziat79.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">An-Nazi'at (46)
-                                                      </h5>
-                                                      <small><i>Malaikat Yang Mencabut</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/abasa80.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">'Abasa (42)</h5>
-                                                      <small><i>Bermuka Masam</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/attakwir81.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">At-Takwir (29)</h5>
-                                                      <small><i>Penggulungan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alinfitar82.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Infitar (19)
-                                                      </h5>
-                                                      <small><i>Terbelah</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/almutaffifin83.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Mutaffifin (36)
-                                                      </h5>
-                                                      <small><i>Orang-Orang Curang</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alinsyiqaq84.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Insyiqaq (25)
-                                                      </h5>
-                                                      <small><i>Terbelah</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alburuj85.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Buruj (22)</h5>
-                                                      <small><i>Gugusan Bintang</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/attariq86.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">At-Tariq (17)</h5>
-                                                      <small><i>Yang Datang Di Malam Hari</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/ala'la87.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-A'la (19)</h5>
-                                                      <small><i>Maha Tinggi</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/algasyiah88.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Gasyiyah (26)
-                                                      </h5>
-                                                      <small><i>Hari Kiamat</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alfajr89.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Fajr (30)</h5>
-                                                      <small><i>Fajar</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/albalad90.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Balad (20)</h5>
-                                                      <small><i>Negeri</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/assyams91.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Asy-Syams (15)</h5>
-                                                      <small><i>Matahari</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/allail92.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Lail (21)</h5>
-                                                      <small><i>Malam</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/adduha93.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Ad-Duha (11)</h5>
-                                                      <small><i>Duha</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/assyarh94.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Asy-Syarh (8)</h5>
-                                                      <small><i>Lapang</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/attin95.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">At-Tin (8)</h5>
-                                                      <small><i>Buah Tin</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/al'alaq96.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-'Alaq (19)</h5>
-                                                      <small><i>Segumpal Darah</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alqadr97.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Qadr (5)</h5>
-                                                      <small><i>Kemuliaan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/albayyinah98.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Bayyinah (8)
-                                                      </h5>
-                                                      <small><i>Bukti Nyata</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alzalzalah99.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Az-Zalzalah (8)
-                                                      </h5>
-                                                      <small><i>Guncangan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/al'adiyat100.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-'Adiyat (11)
-                                                      </h5>
-                                                      <small><i>Kuda Yang Berlari Kencang</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alqari'ah101.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Qari'ah (11)
-                                                      </h5>
-                                                      <small><i>Hari Kiamat</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/attakasur102.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">At-Takasur (8)</h5>
-                                                      <small><i>Bermegah-Megahan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/al'asr103.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-'Asr (3)</h5>
-                                                      <small><i>Masa</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alhumazah104.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Humazah (9)</h5>
-                                                      <small><i>Pengumpat</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alfil105.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Fil (5)</h5>
-                                                      <small><i>Gajah</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/quraisy106.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Quraisy (4)</h5>
-                                                      <small><i>Quraisy</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alma'un107.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Ma'un (7)</h5>
-                                                      <small><i>Barang Yang Berguna</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alkausar108.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Kausar (3)</h5>
-                                                      <small><i>Pemberian Yang Banyak</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alkafirun109.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Kafirun (6)</h5>
-                                                      <small><i>Orang-Orang kafir</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/annasr110.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">An-Nasr (3)</h5>
-                                                      <small><i>Pertolongan</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/allahab111.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Lahab (5)</h5>
-                                                      <small><i>Api Yang Bergejolak</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alikhlas112.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Ikhlas (4)</h5>
-                                                      <small><i>Ikhlas</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/alfalaq113.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Al-Falaq (5)</h5>
-                                                      <small><i>Subuh</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="surat_alquran/annas114.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">An-Nas (6)</h5>
-                                                      <small><i>Manusia</i></small>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="sunnah/terikat_waktu/01_0.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Sunnah Yang
-                                                      Terikat Waktu</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Sunnah Di waktu
-                                                         Sebelum Subuh
-                                                      </h5>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="sunnah/terikat_waktu/02_0.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Sunnah Yang
-                                                      Terikat Waktu</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Sunnah Di Waktu
-                                                         Subuh Dan Setelahnya
-                                                      </h5>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="sunnah/terikat_waktu/03_0.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Sunnah Yang
-                                                      Terikat Waktu</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Sunnah Di Waktu
-                                                         Dhuha
-                                                      </h5>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="sunnah/terikat_waktu/04_0.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Sunnah Yang
-                                                      Terikat Waktu</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Sunnah Di Waktu
-                                                         Zhuhur
-                                                      </h5>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="sunnah/terikat_waktu/05_0.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Sunnah Yang
-                                                      Terikat Waktu</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Sunnah Di Waktu
-                                                         Ashar
-                                                      </h5>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="sunnah/terikat_waktu/06_0.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Sunnah Yang
-                                                      Terikat Waktu</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Sunnah Di Waktu
-                                                         Magrib
-                                                      </h5>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="sunnah/terikat_waktu/07_0.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Sunnah Yang
-                                                      Terikat Waktu</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Sunnah Di Waktu
-                                                         Isya
-                                                      </h5>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="sunnah/umum/01.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Sunnah Yang Tidak
-                                                      Terikat Waktu</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Sunnah Ketika Makan
-                                                      </h5>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="sunnah/umum/02.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Sunnah Yang Tidak
-                                                      Terikat Waktu</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Sunnah Dalam
-                                                         Salam,Bertemu,Dan Bermajelis
-                                                      </h5>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="sunnah/umum/03.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Sunnah Yang Tidak
-                                                      Terikat Waktu</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Sunnah Dalam
-                                                         Memakai Pakaian Dan Perhiasan
-                                                      </h5>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="sunnah/umum/04.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Sunnah Yang Tidak
-                                                      Terikat Waktu</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Sunnah Ketika
-                                                         Bersin Dan Menguap
-                                                      </h5>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="sunnah/umum/05.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Sunnah Yang Tidak
-                                                      Terikat Waktu</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Sunnah-Sunnah
-                                                         Harian Lainnya
-                                                      </h5>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a href="tentang.html" class="dropdown-item">
-                                                <div class="p-0">
-                                                   <h5 class="card-header p-0" style="font-size:10px;">Tentang</h5>
-                                                   <div class="card-body p-0 m-0">
-                                                      <h5 class="card-title" style="font-size:15px;">Tentang Kami</h5>
-                                                   </div>
-                                                </div>
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark"
-                                                href="praktek ibadah/syarat-wudhu.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Syarat Sah Wudhu
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="praktek ibadah/rukun-wudhu.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Rukun Wudhu
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="praktek ibadah/tata-wudhu.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Tata cara Wudhu
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark"
-                                                href="praktek ibadah/pembatalan-wudhu.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Pembatalan Wudhu
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="praktek ibadah/sah-shalat.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Syarat Sah Shalat
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark"
-                                                href="praktek ibadah/rukun-sholat.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Rukun Sholat
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark"
-                                                href="praktek ibadah/sholat-fardu.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Sholat Fardhu
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark"
-                                                href="praktek ibadah/sholat-sunah.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Sholat Sunnah
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark"
-                                                href="praktek ibadah/pembatalan-sholat.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Pembatalan Sholat
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="praktek ibadah/syarat-haji.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Syarat Wajib Haji
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="praktek ibadah/rukun-haji.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Rukun Haji
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark"
-                                                href="praktek ibadah/pelaksana-haji.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Cara pelaksanaan Haji
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark"
-                                                href="praktek ibadah/pembatalan-haji.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Pembatalan Haji
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark"
-                                                href="praktek ibadah/syarat-khutbah.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Syarat Wajib Khutbah
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark"
-                                                href="praktek ibadah/rukun-khutbah.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Rukun Khutbah
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark"
-                                                href="praktek ibadah/syarat-taymum.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Syarat Wajib Tayamum
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark"
-                                                href="praktek ibadah/rukun-tayamum.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Rukun Tayamum
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark"
-                                                href="praktek ibadah/tatacara-tayamum.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Cara pelaksanaan Tayamum
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark"
-                                                href="praktek ibadah/pembatalan-tayamum.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Praktek Ibadah</h5>
-                                                Pembatalan Tayamum
-                                             </a></li>
-                                          <li>
-                                             <a class="dropdown-item text-dark" href="maulid/dibai.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Maulid Nabi</h5>
-                                                <strong>Maulid Diba'i</strong> <br />
-                                                <small><i>29 Bacaan</i></small>
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a class="dropdown-item text-dark" href="maulid/barzanji.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Maulid Nabi</h5>
-                                                <strong> Maulid Barzanji </strong> <br />
-                                                <small><i>20 Bacaan</i></small>
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a class="dropdown-item text-dark" href="maulid/syarafil.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Maulid Nabi</h5>
-                                                <strong>Maulid Syarafil Anam</strong> <br />
-                                                <small><i>39 Bacaan</i></small>
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a class="dropdown-item text-dark" href="maulid/burdah.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Maulid Nabi</h5>
-                                                <strong> Qasidah Burdah </strong> <br />
-                                                <small><i>10 Bacaan</i></small>
-                                             </a>
-                                          </li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/wirid.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Wirid
-                                                Setelah Sholat
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/ayatkursi.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Ayat
-                                                Kursi
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/tahlil.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Tahlil
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/talqinmayit.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Talqin
-                                                Mayit
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/doayasin.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Doa
-                                                Surat Yasin
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/doaselamet.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Doa
-                                                Selamet
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/khatamquran.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Doa
-                                                khatam Quran
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/doanurbuwat.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Doa Nur
-                                                Buat
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/doakanzularsy.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Doa
-                                                Kanzul Arsy
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/ratibulhadad.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Ratibul
-                                                Haddad
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/doanisfusyaban.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Doa
-                                                Nisfu Sya'ban
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/azdaniqomah.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Doa
-                                                Setelah Azdan dan Iqomah
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/doasujud.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Doa-Doa
-                                                Sujud
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/doaqunut.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Doa
-                                                Qunut
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/doatasyahudakir.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Doa
-                                                Tasyahud Akhir
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/doasholat.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Doa-Doa
-                                                Sholat
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/doaharian.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Doa-Doa
-                                                Harian
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/ayat15.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Ayat 15
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/ayat7.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Ayat 7
-                                             </a></li>
-                                          <li><a class="dropdown-item text-dark" href="doa-doa/ayat5.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Doa-Doa</h5>Ayat 5
-                                             </a></li>
-                                          <li>
-                                             <a class="dropdown-item text-dark" href="sholawat/badar.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Sholawat</h5>
-                                                Sholawat Badar
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a class="dropdown-item text-dark" href="sholawat/arhamarohimin.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Sholawat</h5>
-                                                Sholawat
-                                                Yaa Arhama Rohimin
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a class="dropdown-item text-dark" href="sholawat/jibril.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Sholawat</h5>
-                                                Sholawat
-                                                Jibril
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a class="dropdown-item text-dark" href="sholawat/fatih.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Sholawat</h5>
-                                                Sholawat Fatih
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a class="dropdown-item text-dark" href="sholawat/dustur.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Sholawat</h5>
-                                                Sholawat
-                                                Dustur
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a class="dropdown-item text-dark" href="sholawat/munjihat.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Sholawat</h5>
-                                                Sholawat
-                                                Munjihat
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a class="dropdown-item text-dark" href="sholawat/mukhtar.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Sholawat</h5>
-                                                Sholawat
-                                                Mukhtar
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a class="dropdown-item text-dark" href="sholawat/nariyah.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Sholawat</h5>
-                                                Sholawat
-                                                Nariyah
-                                             </a>
-                                          </li>
-                                          <li>
-                                             <a class="dropdown-item text-dark" href="sholawat/tibilqliub.html">
-                                                <h5 class="card-header p-0" style="font-size:10px;">Sholawat</h5>
-                                                Sholawat
-                                                Tibbil Qliub
-                                             </a>
-                                          </li>
+                                       <ul class="mt-5 dropdown-menu w-100 list-page sticky-top position-absolute"
+                                          id="dropdownMenu" aria-labelledby="searchInput" x-data="loadSurat()"
+                                          x-init="fetchData()">
+                                          <script type="module" src="./search_page.js"></script>
                                        </ul>
                                     </div>
                                  </div>
@@ -1627,15 +195,15 @@
             <div class="col-12">
                <div class="row">
                   <h4 class="fw-bolder mb-2 ms-2">Sering Dibaca</h4>
-                  <div class="col-6">
-                     <div class="card" data-aos="fade-up" data-aos-delay="650">
+                  <div class="col-6 p-1">
+                     <div class="card">
                         <div class="flex-wrap card-header d-flex justify-content-between align-items-center">
                            <div class="header-title gap-2 d-flex align-items-center">
                               <img src="../assets/icon/doa.png" height="40px" alt="">
                               <h6 class="fw-bolder">Doa-Doa</h6>
                            </div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body m-0">
                            <h3 class="fw-bolder text-center">Tahlil</h3>
                            <div class="container">
                               <p class="fw-bold  truncate-multiline mt-3 text-center arabic-font"
@@ -1650,15 +218,15 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-6">
-                     <div class="card" data-aos="fade-up" data-aos-delay="650">
+                  <div class="col-6 p-1">
+                     <div class="card">
                         <div class="flex-wrap card-header d-flex justify-content-between align-items-center">
                            <div class="header-title gap-2 d-flex align-items-center">
                               <img src="../assets/icon/quran.png" height="40px" alt="">
                               <h6 class="fw-bolder">Al-quran</h6>
                            </div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body m-0">
                            <h3 class="fw-bolder text-center">Yasin</h3>
                            <div class="container">
                               <p class="fw-bold  truncate-multiline mt-3 text-center arabic-font"
@@ -1675,7 +243,7 @@
                      </div>
                   </div>
                   <div class="col-12">
-                     <div class="card" data-aos="fade-up" data-aos-delay="650">
+                     <div class="card">
                         <div class="flex-wrap card-header d-flex justify-content-between align-items-center">
                            <div class="header-title gap-2 d-flex align-items-center">
                               <img src="../assets/icon/quran.png" height="40px" alt="">
@@ -1694,7 +262,7 @@
                                  السَّمٰوٰتِ وَالْاَرْضَۚ وَلَا يَـُٔوْدُهٗ حِفْظُهُمَاۚ وَهُوَ الْعَلِيُّ الْعَظِيْمُ
                                  (٢٥٥)
                               </p>
-                              <p class="fw-bold  truncate-multiline mt-3 text-center long-text">
+                              <p class="fw-bold truncate-multiline mt-3 text-center long-text">
                                  Artinya : <br> Allah, tidak ada tuhan selain Dia, Yang Mahahidup lagi terus-menerus
                                  mengurus (makhluk-Nya). Dia tidak dilanda oleh kantuk dan tidak (pula) oleh tidur.
                                  Milik-Nyalah apa yang ada di langit dan apa yang ada di bumi. Tidak ada yang dapat
@@ -1703,6 +271,7 @@
                                  dari ilmu-Nya, kecuali apa yang Dia kehendaki. Kursi-Nya (ilmu dan kekuasaan-Nya)
                                  meliputi langit dan bumi. Dia tidak merasa berat memelihara keduanya. Dialah yang
                                  Mahatinggi lagi Mahaagung.
+                              </p>
                               <div class=" text-center">
                                  <a href="doa-doa/ayatkursi.html" class="btn btn-sm btn-primary">Baca😊</a>
                               </div>
@@ -1710,40 +279,17 @@
                         </div>
                      </div>
                   </div>
+               </div>
+               <div class="row">
+                  <div class="d-flex justify-content-between px-3">
+                     <h4 class="fw-bolder mb-2 ms-2">Kajian</h4>
+                     <a href="./stream.html">Lainnya >></a>
+                  </div>
                   <div class="col-12">
-                     <div class="card" data-aos="fade-up" data-aos-delay="650">
-                        <div class="flex-wrap card-header d-flex justify-content-between align-items-center">
-                           <div class="header-title gap-2 d-flex align-items-center">
-                              <img src="../assets/icon/doa.png" height="40px" alt="">
-                              <h6 class="fw-bolder">Doa</h6>
-                           </div>
-                        </div>
-                        <div class="card-body">
-                           <h3 class="fw-bolder text-center">Doa Untuk Kedua Orang Tua</h3>
-                           <div class="container">
-                              <p class="fw-bold  truncate-multiline mt-3 text-center arabic-font"
-                                 style="line-height: 2;">
-                                 رَبِّ اغْفِرْ لِيْ وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِيْ صَغِيْرَا. رَبَّنَا
-                                 آتِنَا فِى الدُّنْيَا حَسَنَةً، وَفِى الْآخِرَةِ حَسَنَةً، وَقِنَا عَذَابَ النَّارِ،
-                                 سًبْحَانَ رَبَّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُوْنَ، وَسَلَامٌ عَلَى الْمُرْسَلِيْنَ،
-                                 وَصَلَّى اللهُ علَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى اَلِهِ وَصَحْبِهِ وَسَلَّمَ
-                                 وَالْحَمْدُ لِلهِ رَبِّ الْعَلَمِيْنَ
-                              </p>
-                              <p class="fw-bold  truncate-multiline mt-3 text-center long-text">
-                                 Artinya:<br> "Tuhanku, ampunilah dosaku dan (dosa) kedua orang tuaku. Sayangilah
-                                 keduanya sebagaimana keduanya menyayangiku di waktu aku kecil. Tuhan kami, berikanlah
-                                 kami kebaikan di dunia dan kebaikan di akhirat. Lindungi kami dari siksa api neraka.
-                                 Maha suci Tuhanmu, Tuhan pemilik kemuliaan, dari segala yang mereka gambarkan. Semoga
-                                 kesejahteraan melimpah untuk para rasul. Semoga Allah melimpahkan shalawat dan salam
-                                 kepada Nabi Muhammad SAW, keluarga, dan sahabatnya. Segala puji bagi Allah, Tuhan
-                                 sekalian alam."</p>
-                              </p>
-                              <div class=" text-center">
-                                 <a href="doa-doa/doaharian.html#list-item-12" class="btn btn-sm btn-primary">Baca😊</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                     <div id="live-videos">Loading...</div>
+                  </div>
+                  <div class="row m-0">
+                     <div id="replay-videos"></div>
                   </div>
                </div>
             </div>
@@ -1768,6 +314,37 @@
       document.addEventListener('pause', function () {
          localStorage.removeItem('alertShown');
       });
+   </script>
+   <script>
+      document.addEventListener('alpine:init', () => {
+         Alpine.data('loadSurat', () => ({
+            list: [],
+            async fetchData() {
+               const res = await fetch('../assets/api/quran.json');
+               const json = await res.json();
+               this.list = json.data;
+               this.render();
+            },
+            render() {
+               const target = document.querySelector('.list-page');
+               this.list.forEach(surat => {
+                  target.insertAdjacentHTML('afterbegin', `
+                        <li>
+                           <a href="./surat_alquran/detail.html?surat=${surat["surat-ke"]}" class="dropdown-item">
+                               <div class="p-0">
+                                     <h5 class="card-header p-0" style="font-size:10px;">Al-quran</h5>
+                                     <div class="card-body p-0 m-0">
+                                           <h5 class="card-title" style="font-size:15px;">${surat.name} (${surat["jumlah-surat"]})</h5>
+                                           <small><i>${surat.artinya.indonesia}</i></small>
+                                     </div>
+                               </div>
+                           </a>
+                        </li>
+                    `)
+               });
+            }
+         }))
+      })
    </script>
    <script>
       document.getElementById('searchInput').addEventListener('input', function () {
@@ -1807,18 +384,86 @@
          }
       });
    </script>
+   <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzj-P749IvpzjVPWol0sJEN2e4eLH49RVEcN2SlvIaCTCIql8JbvxHdPQQWksE1nt7u/exec";
+      const cacheKey = 'yt_live_replay';
+      const cacheExpireKey = 'yt_live_replay_expire';
+      const now = Date.now();
+      async function loadData() {
+         const cached = localStorage.getItem(cacheKey);
+         const expire = localStorage.getItem(cacheExpireKey);
+         if (cached && expire && now < parseInt(expire)) {
+            render(JSON.parse(cached));
+         } else {
+            try {
+               const res = await fetch(scriptURL);
+               const data = await res.json();
+               localStorage.setItem(cacheKey, JSON.stringify(data));
+               localStorage.setItem(cacheExpireKey, now + (60 * 60 * 1000)); // expire 1 jam
+               render(data);
+            } catch (err) {
+               document.getElementById('live-videos').innerText = '❌ Gagal memuat livestream.';
+               document.getElementById('replay-videos').innerText = '';
+               console.error(err);
+            }
+         }
+      }
+      function refreshData() {
+         localStorage.removeItem(cacheKey);
+         localStorage.removeItem(cacheExpireKey);
+         location.reload();
+      }
+      function render(data) {
+         const liveContainer = document.getElementById('live-videos');
+         const replayContainer = document.getElementById('replay-videos');
+         const liveVideos = data.filter(v => v.isLive);
+         const replayVideos = data.filter(v => !v.isLive);
+         if (liveVideos.length === 0) {
+            liveContainer.innerHTML = '<div class="card text-center pt-3"><p>Tidak ada livestream yang sedang berlangsung.</p><button class="btn btn-primary btn-sm text-light fw-bolder" onclick = "refreshData()" style = "margin-bottom: 1rem;" >🔄 Refresh Data</button></div>';
+         } else {
+            liveContainer.innerHTML = liveVideos.map(v => renderVideo(v)).join('');
+         }
+         if (replayVideos.length === 0) {
+            replayContainer.innerHTML = '<div class="card text-center pt-3"><p>Belum ada replay livestream.</p></div>';
+         } else {
+            const latestReplay = replayVideos[0];
+            replayContainer.innerHTML = renderVideo(latestReplay);
+         }
+      }
+      function renderVideo(v) {
+         return `
+            <div class="card">
+               <div class="flex-wrap card-header d-flex justify-content-between align-items-center">
+                  <div class="header-title gap-2 d-flex align-items-center">
+                     <img src="../assets/icon/live.png" height="40px" alt="">
+                     <small class="fw-bolder truncate-multiline-2">${v.title}</small>
+                  </div>
+               </div>
+               <div class="card-body">
+                  <div class="container">
+                     <div class="responsive-yt">
+                        <iframe
+                        src="https://www.youtube-nocookie.com/embed/${v.videoId}"
+                        allowfullscreen frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                        </iframe>
+                     </div>
+                     <div class="mt-2 text-start">
+                        <small class="truncate-multiline-2">${v.description.replace(/\n/g, '<br>')}</small>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            `;
+      }
+      loadData();
+   </script>
    <script src="../assets/js/core/libs.min.js"></script>
    <script src="../assets/js/core/external.min.js"></script>
-   <script src="../assets/js/charts/widgetcharts.js"></script>
-   <script src="../assets/js/charts/vectore-chart.js"></script>
-   <script src="../assets/js/charts/dashboard.js"></script>
    <script src="../assets/js/plugins/fslightbox.js"></script>
-   <script src="../assets/js/plugins/setting.js"></script>
    <script src="../assets/js/plugins/slider-tabs.js"></script>
-   <script src="../assets/js/plugins/form-wizard.js"></script>
    <script src="../assets/vendor/aos/dist/aos.js"></script>
    <script src="../assets/js/hope-ui.js" defer></script>
    <script src="../assets/node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
 </body>
-
 </html>
