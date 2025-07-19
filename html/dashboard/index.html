@@ -108,8 +108,8 @@
          <div class="row">
             <div class="col-12">
                <div class="row row-cols-12">
-                  <ul class="container p-0 mb-2">
-                     <li class="card card-slide" data-aos="fade-up" data-aos-delay="700">
+                  <ul class="container p-0 m-0">
+                     <li class="card card-slide mb-3" data-aos="fade-up" data-aos-delay="700">
                         <div class="card-body  text-center">
                            <div class="row mt-2 p-1">
                               <div class="col-12 mb-3 d-flex justify-content-center">
@@ -194,7 +194,19 @@
             </div>
             <div class="col-12">
                <div class="row">
-                  <h4 class="fw-bolder mb-2 ms-2">Sering Dibaca</h4>
+                  <div class="d-flex justify-content-between px-3">
+                     <h5 class="fw-bolder mb-2">> Kajian</h5>
+                     <a href="./stream.html"><small>Selengkapnya >></small></a>
+                  </div>
+                  <div class="col-12">
+                     <div id="live-videos">Loading...</div>
+                  </div>
+                  <div class="row m-0">
+                     <div id="replay-videos" class="p-0"></div>
+                  </div>
+               </div>
+               <div class="row">
+                  <h5 class="fw-bolder mb-2 ms-2">> Sering Dibaca</h5>
                   <div class="col-6 p-1">
                      <div class="card">
                         <div class="flex-wrap card-header d-flex justify-content-between align-items-center">
@@ -278,18 +290,6 @@
                            </div>
                         </div>
                      </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="d-flex justify-content-between px-3">
-                     <h4 class="fw-bolder mb-2 ms-2">Kajian</h4>
-                     <a href="./stream.html">Lainnya >></a>
-                  </div>
-                  <div class="col-12">
-                     <div id="live-videos">Loading...</div>
-                  </div>
-                  <div class="row m-0">
-                     <div id="replay-videos"></div>
                   </div>
                </div>
             </div>
@@ -419,7 +419,7 @@
          const liveVideos = data.filter(v => v.isLive);
          const replayVideos = data.filter(v => !v.isLive);
          if (liveVideos.length === 0) {
-            liveContainer.innerHTML = '<div class="card text-center pt-3"><p>Tidak ada livestream yang sedang berlangsung.</p><button class="btn btn-primary btn-sm text-light fw-bolder" onclick = "refreshData()" style = "margin-bottom: 1rem;" >🔄 Refresh Data</button></div>';
+            liveContainer.innerHTML = '<div class="card text-center pt-3"><p>Tidak ada livestream yang sedang berlangsung.</p><div class="px-5"><button class="btn btn-primary btn-sm text-light fw-bolder" onclick = "refreshData()" style = "margin-bottom: 1rem;" >🔄 Refresh Data</button></div></div>';
          } else {
             liveContainer.innerHTML = liveVideos.map(v => renderVideo(v)).join('');
          }
@@ -443,9 +443,8 @@
                   <div class="container">
                      <div class="responsive-yt">
                         <iframe
-                        src="https://www.youtube-nocookie.com/embed/${v.videoId}"
-                        allowfullscreen frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                        src="https://www.youtube.com/embed/${v.videoId}"
+                        allowfullscreen>
                         </iframe>
                      </div>
                      <div class="mt-2 text-start">
@@ -460,7 +459,6 @@
    </script>
    <script src="../assets/js/core/libs.min.js"></script>
    <script src="../assets/js/core/external.min.js"></script>
-   <script src="../assets/js/plugins/fslightbox.js"></script>
    <script src="../assets/js/plugins/slider-tabs.js"></script>
    <script src="../assets/vendor/aos/dist/aos.js"></script>
    <script src="../assets/js/hope-ui.js" defer></script>
