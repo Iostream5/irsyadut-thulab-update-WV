@@ -75,32 +75,36 @@
          <nav id="body-nav" class="nav navbar navbar-expand-lg navbar-light iq-navbar">
             <script type="module" src="../components/body-nav.js"></script>
          </nav>
-         <div class="iq-navbar-header">
+         <div class="iq-navbar-header mt-2" x-data="{
+                 banners: Array.from({ length: 8 }, (_, i) => `../assets/images/banner/banner/${i + 1}.png`),
+                 hasRendered: false
+              }" x-init="
+                 $nextTick(() => {
+                    const el = document.getElementById('carouselExampleInterval');
+                    new bootstrap.Carousel(el, {
+                       interval: 3000,
+                       ride: 'carousel',
+                       pause: false
+                    });
+                    hasRendered = true;
+                 });
+              ">
             <div class="flex-wrap text-center">
-               <div id="carouselExampleInterval" class="container-fluid carousel slide" data-bs-ride="carousel">
+               <div id="carouselExampleInterval" class="carousel slide" x-show="hasRendered">
                   <div class="carousel-inner rounded shadow">
-                     <div class="carousel-item  position-relative active" data-bs-interval="3000">
-                        <img src="../assets/images/banner/banner/banner1.png" class="d-block w-100 position-relative"
-                           alt="...">
-                     </div>
-                     <div class="carousel-item  position-relative" data-bs-interval="3000">
-                        <img src="../assets/images/banner/banner/banner2.png" class="d-block w-100 position-relative"
-                           alt="...">
-                     </div>
-                     <div class="carousel-item  position-relative" data-bs-interval="3000">
-                        <img src="../assets/images/banner/banner/banner3.png" class="d-block w-100 position-relative"
-                           alt="...">
-                     </div>
-                     <div class="carousel-item  position-relative" data-bs-interval="3000">
-                        <img src="../assets/images/banner/banner/banner4.png" class="d-block w-100 position-relative"
-                           alt="...">
-                     </div>
+                     <template x-for="(banner, index) in banners" :key="index">
+                        <div class="carousel-item position-relative" :class="{ 'active': index === 0 }">
+                           <img :src="banner" class="d-block w-100 position-relative" alt="...">
+                        </div>
+                     </template>
                   </div>
+                  <!-- Prev -->
                   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
                      data-bs-slide="prev">
                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                      <span class="visually-hidden">Previous</span>
                   </button>
+                  <!-- Next -->
                   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
                      data-bs-slide="next">
                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -425,7 +429,7 @@
          const liveVideos = data.filter(v => v.isLive);
          const replayVideos = data.filter(v => !v.isLive);
          if (liveVideos.length === 0) {
-            liveContainer.innerHTML = '<div class="card text-center pt-3"><p>Tidak ada livestream yang sedang berlangsung.</p><div class="px-5"><button class="btn btn-primary btn-sm text-light fw-bolder" onclick = "refreshData()" style = "margin-bottom: 1rem;" >🔄 Refresh Data</button></div></div>';
+            liveContainer.innerHTML = '<div class="card text-center pt-3"><p>Kajian secara Live pada setiap malam minggu.</p><div class="px-5"><button class="btn btn-primary btn-sm text-light fw-bolder" onclick = "refreshData()" style = "margin-bottom: 1rem;" >🔄 Refresh Data</button></div></div>';
          } else {
             liveContainer.innerHTML = liveVideos.map(v => renderVideo(v)).join('');
          }
@@ -438,7 +442,7 @@
       }
       function renderVideo(v) {
          return `
-            <div class="card">
+            < div class="card" >
                <div class="flex-wrap card-header d-flex justify-content-between align-items-center">
                   <div class="header-title gap-2 d-flex align-items-center">
                      <img src="../assets/icon/live.png" height="40px" alt="">
@@ -458,7 +462,7 @@
                      </div>
                   </div>
                </div>
-            </div>
+            </div >
             `;
       }
       loadData();

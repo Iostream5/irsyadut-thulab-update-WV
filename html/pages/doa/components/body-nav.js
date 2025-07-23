@@ -1,7 +1,5 @@
 const body_nav = document.getElementById('body-nav')
-
 body_nav.insertAdjacentHTML('beforeend', `
-
           <a href="../../dashboard.html" class="navbar-brand ms-auto me-auto me-auto">
             <div class="logo-main">
               <div class="logo-normal">
@@ -18,5 +16,4 @@ body_nav.insertAdjacentHTML('beforeend', `
               <img src="../../../assets/icon/bar.png" class="icon-20" alt="" />
             </i>
           </div>
-        
 `)
