@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no shrink-to-fit=no">
+    <title>Irsyadut Thulab | Tentang</title>
+    <link rel="shortcut icon" href="../assets/icon/tentang.png" />
+    <link rel="stylesheet" href="../assets/css/core/libs.min.css" />
+    <link rel="stylesheet" href="../assets/vendor/aos/dist/aos.css" />
+    <link rel="stylesheet" href="../assets/css/hope-ui.min.css?v=2.0.0" />
+    <link rel="stylesheet" href="../assets/css/custom.min.css?v=2.0.0" />
+    <link rel="stylesheet" href="../assets/css/dark.min.css" />
+    <link rel="stylesheet" href="../assets/css/customizer.min.css" />
+
+</head>
+<style>
+    .truncate-multiline {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .truncate-multiline-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .responsive-yt {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    .responsive-yt iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+</style>
+
+<body class="  ">
+    <div id="loading">
+        <div class="loader simple-loader">
+            <div class="loader-body"></div>
+        </div>
+    </div>
+    <aside id="body-sidebar" class="sidebar sidebar-default sidebar-white sidebar-base navs-rounded-all">
+        <script type="module" src="../components/body-sidebar.js"></script>
+    </aside>
+    <main class="main-content">
+        <div id="main-cs-btn" class="position-relative iq-banner">
+            <script src="../components/main-cs-btn.js"></script>
+            <nav id="body-nav" class="nav navbar navbar-expand-lg navbar-light iq-navbar">
+                <script type="module" src="../components/body-nav.js"></script>
+            </nav>
+        </div>
+        <div class="overflow-hidden card mt-3">
+            <div class="row">
+                <div class="col-12">
+                    <div id="live-videos">Loading...</div>
+                </div>
+                <div class="row m-0">
+                    <div id="replay-videos"></div>
+                </div>
+            </div>
+        </div>
+        <footer id="body-footer" class="footer">
+            <script src="../components/body-footer.js"></script>
+        </footer>
+    </main>
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbzj-P749IvpzjVPWol0sJEN2e4eLH49RVEcN2SlvIaCTCIql8JbvxHdPQQWksE1nt7u/exec";
+        const cacheKey = 'yt_live_replay';
+        const cacheExpireKey = 'yt_live_replay_expire';
+        const now = Date.now();
+        async function loadData() {
+            const cached = localStorage.getItem(cacheKey);
+            const expire = localStorage.getItem(cacheExpireKey);
+            if (cached && expire && now < parseInt(expire)) {
+                render(JSON.parse(cached));
+            } else {
+                try {
+                    const res = await fetch(scriptURL);
+                    const data = await res.json();
+                    localStorage.setItem(cacheKey, JSON.stringify(data));
+                    localStorage.setItem(cacheExpireKey, now + (60 * 60 * 1000)); // expire 1 jam
+                    render(data);
+                } catch (err) {
+                    document.getElementById('live-videos').innerText = '❌ Gagal memuat livestream.';
+                    document.getElementById('replay-videos').innerText = '';
+                    console.error(err);
+                }
+            }
+        }
+        function refreshData() {
+            localStorage.removeItem(cacheKey);
+            localStorage.removeItem(cacheExpireKey);
+            location.reload();
+        }
+        function render(data) {
+            const liveContainer = document.getElementById('live-videos');
+            const replayContainer = document.getElementById('replay-videos');
+            const liveVideos = data.filter(v => v.isLive);
+            const replayVideos = data.filter(v => !v.isLive);
+            if (liveVideos.length === 0) {
+                liveContainer.innerHTML = '<div class="card text-center pt-3"><p>Tidak ada livestream yang sedang berlangsung.</p><div class="px-5"><button class="btn btn-primary btn-sm text-light fw-bolder" onclick = "refreshData()" style = "margin-bottom: 1rem;" >🔄 Refresh Data</button></div></div>';
+            } else {
+                liveContainer.innerHTML = liveVideos.map(v => renderVideo(v)).join('');
+            }
+            if (replayVideos.length === 0) {
+                replayContainer.innerHTML = '<div class="card text-center pt-3"><p>Belum ada replay livestream.</p></div>';
+            } else {
+                replayContainer.innerHTML = replayVideos.map(v => renderVideo(v)).join('');
+            }
+        }
+        function renderVideo(v) {
+            return `
+                <div class="card">
+                   <div class="flex-wrap card-header d-flex justify-content-between align-items-center">
+                      <div class="header-title gap-2 d-flex align-items-center">
+                         <img src="../assets/icon/live.png" height="40px" alt="">
+                         <small class="fw-bolder truncate-multiline-2">${v.title}</small>
+                      </div>
+                   </div>
+                   <div class="card-body">
+                      <div class="container">
+                         <div class="responsive-yt">
+                            <iframe
+                            src="https://www.youtube-nocookie.com/embed/${v.videoId}"
+                            allowfullscreen frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                            </iframe>
+                         </div>
+                         <div class="mt-2 text-start">
+                            <small class="truncate-multiline-2">${v.description.replace(/\n/g, '<br>')}</small>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                `;
+        }
+        loadData();
+    </script>
+    <script src="../assets/js/core/libs.min.js"></script>
+    <script src="../assets/js/core/external.min.js"></script>
+    <script src="../assets/vendor/aos/dist/aos.js"></script>
+    <script src="../assets/js/hope-ui.js" defer></script>
+    <script type="module" src="./01-button-contoller.js"></script>
+</body>
+
+</html>

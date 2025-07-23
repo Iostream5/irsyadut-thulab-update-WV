@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no shrink-to-fit=no">
+   <title>Irsyadut Thulab | Hadits Pilihan</title>
+   <link rel="shortcut icon" href="../assets/icon/hadits.png" />
+   <link rel="stylesheet" href="../assets/css/core/libs.min.css" />
+   <link rel="stylesheet" href="../assets/vendor/aos/dist/aos.css" />
+   <link rel="stylesheet" href="../assets/css/hope-ui.min.css?v=2.0.0" />
+   <link rel="stylesheet" href="../assets/css/custom.min.css?v=2.0.0" />
+   <link rel="stylesheet" href="../assets/css/dark.min.css" />
+   <link rel="stylesheet" href="../assets/css/customizer.min.css" />
+</head>
+<style>
+   .circle-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0;
+   }
+
+   .circle-background {
+      fill: none;
+      stroke: #f0f0f0;
+      stroke-width: 12;
+   }
+
+   .circle-foreground {
+      fill: none;
+      stroke: #0277d8;
+      stroke-width: 12;
+      stroke-linecap: round;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+      stroke-dasharray: 440;
+      /* Perimeter lingkaran (2 * PI * r) */
+      stroke-dashoffset: 440;
+      /* Full circumference untuk animasi */
+      transition: stroke-dashoffset 1s linear;
+      filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
+   }
+
+   .countdown-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      font-weight: bold;
+      color: #212529;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+   }
+
+   .circle-container h2 {
+      font-size: 16px;
+      margin-bottom: 5px;
+   }
+
+   table td,
+   table th {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+   }
+
+   tbody td {
+      font-weight: 500;
+      color: #999999;
+   }
+
+   .card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   }
+
+   .countdown {
+      font-size: 20px;
+      font-weight: bold;
+      color: #28a745;
+   }
+</style>
+
+<body class="  ">
+   <div id="loading">
+      <div class="loader simple-loader">
+         <div class="loader-body"></div>
+      </div>
+   </div>
+   <aside id="body-sidebar" class="sidebar sidebar-default sidebar-white sidebar-base navs-rounded-all">
+      <script type="module" src="../components/body-sidebar.js"></script>
+   </aside>
+   <main class="main-content" style="height: 85vh;">
+      <div id="main-cs-btn" class="position-relative iq-banner">
+         <script src="../components/main-cs-btn.js"></script>
+         <nav id="body-nav" class="nav navbar navbar-expand-lg navbar-light iq-navbar">
+            <script type="module" src="../components/body-nav.js"></script>
+         </nav>
+         <div class="iq-navbar-header" style="height: 200px;">
+            <div class="container-fluid iq-container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="flex-wrap  text-center">
+                        <div class="d-flex justify-content-center gap-2 align-items-center">
+                           <img src="../assets/icon/hadits.png" height="40px" alt="" />
+                           <h2 class="mx-lg-5 fs-lg-1"> Hadits Hadits </h2>
+                           <img src="../assets/icon/hadits.png" height="40px" alt="" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="iq-header-img">
+               <img src="../assets/images/banner/solat.jpg" alt="header"
+                  class="theme-color-default-img img-fluid w-100 h-100 animated-scaleX" />
+            </div>
+         </div>
+      </div>
+      <div class="container mt-n5 p-2">
+         <div class="overflow-hidden d-slider1">
+            <div class="card p-3 text-center" data-aos="fade-up" data-aos-delay="800">
+               <h1 class="text-center fw-bold p-4">Hadits Pilihan</h1>
+               <ul class="list-group list-group-flush text-center">
+                  <a class="list-group-item list-group-item-action" href="./hadist/hadits1.html">
+                     Akhlak dan Adab</a>
+                  <a class="list-group-item list-group-item-action" href="./hadist/hadits2.html">
+                     Doa dan Ibadah</a>
+                  <a class="list-group-item list-group-item-action" href="./hadist/hadits3.html">
+                     Pendidikan dan Pengajaran</a>
+                  <a class="list-group-item list-group-item-action" href="./hadist/hadits4.html">
+                     Sikap Terhadap Sesama</a>
+                  <a class="list-group-item list-group-item-action" href="./hadist/hadits5.html">
+                     Akhlaq Mulia dan Etika</a>
+               </ul>
+            </div>
+         </div>
+      </div>
+      </div>
+   </main>
+   <footer id="body-footer" class="footer">
+      <script src="../components/body-footer.js"></script>
+   </footer>
+   <div class="justify-content-arround"></div>
+   <script src="../assets/js/core/libs.min.js"></script>
+   <script src="../assets/js/core/external.min.js"></script>
+   <script src="../assets/vendor/aos/dist/aos.js"></script>
+   <script src="../assets/js/hope-ui.js" defer></script>
+   <script type="module" src="./01-button-contoller.js"></script>
+</body>
+
+</html>

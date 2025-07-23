@@ -4,10 +4,10 @@ body_sidebar.insertAdjacentHTML('beforeend', `
       <div class="navbar-brand" style="pointer-events: none">
         <div class="logo-main">
           <div class="logo-normal">
-            <img src="../assets/logo.png" height="40px" alt="" />
+            <img src="../../../assets/logo.png" height="40px" alt="" />
           </div>
           <div class="logo-mini">
-            <img src="../assets/logo.png" height="40px" alt="" />
+            <img src="../../../assets/logo.png" height="40px" alt="" />
           </div>
         </div>
         <h5 class="logo-title">Irsyadut Thulab</h5>
@@ -36,73 +36,73 @@ body_sidebar.insertAdjacentHTML('beforeend', `
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../pages/dashboard.html">
+              <a class="nav-link" aria-current="page" href="../../dashboard.html">
                 <i class="icon">
-                  <img class="icon-20" src="../assets/icon/sidebar/menu.png" style="opacity: 70%" />
+                  <img class="icon-20" src="../../../assets/icon/sidebar/menu.png" style="opacity: 70%" />
                 </i>
                 <span class="item-name">Beranda</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../pages/alquran.html">
+              <a class="nav-link" aria-current="page" href="../../alquran.html">
                 <i class="icon fw-lighter">
-                  <img class="icon-20" src="../assets/icon/sidebar/quran.png" style="opacity: 70%" />
+                  <img class="icon-20" src="../../../assets/icon/sidebar/quran.png" style="opacity: 70%" />
                 </i>
                 <span class="item-name">Al-Quran</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../pages/hadist.html">
+              <a class="nav-link" aria-current="page" href="../../hadist.html">
                 <i class="icon">
-                  <img class="icon-20" src="../assets/icon/sidebar/hadits.png" style="opacity: 70%" />
+                  <img class="icon-20" src="../../../assets/icon/sidebar/hadits.png" style="opacity: 70%" />
                 </i>
                 <span class="item-name">Hadits Pilihan</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../pages/sunnah.html">
+              <a class="nav-link" aria-current="page" href="../../sunnah.html">
                 <i class="icon">
-                  <img class="icon-20" src="../assets/icon/sidebar/sunah.png" style="opacity: 70%" />
+                  <img class="icon-20" src="../../../assets/icon/sidebar/sunah.png" style="opacity: 70%" />
                 </i>
                 <span class="item-name">Sunnah Nabi</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../pages/maulid.html">
+              <a class="nav-link" aria-current="page" href="../../maulid.html">
                 <i class="icon">
-                  <img class="icon-20" src="../assets/icon/sidebar/muhammad.png" style="opacity: 70%" />
+                  <img class="icon-20" src="../../../assets/icon/sidebar/muhammad.png" style="opacity: 70%" />
                 </i>
                 <span class="item-name">Maulid Nabi</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../pages/doa.html">
+              <a class="nav-link" aria-current="page" href="../../doa.html">
                 <i class="icon">
-                  <img class="icon-20" src="../assets/icon/sidebar/doa.png" style="opacity: 70%" />
+                  <img class="icon-20" src="../../../assets/icon/sidebar/doa.png" style="opacity: 70%" />
                 </i>
                 <span class="item-name">Doa Doa</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../pages/sholawat.html">
+              <a class="nav-link" aria-current="page" href="../../sholawat.html">
                 <i class="icon">
-                  <img class="icon-20" src="../assets/icon/sidebar/sholawat.png" style="opacity: 70%" />
+                  <img class="icon-20" src="../../../assets/icon/sidebar/sholawat.png" style="opacity: 70%" />
                 </i>
                 <span class="item-name">Sholawat</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../pages/praktek_ibadah.html">
+              <a class="nav-link" aria-current="page" href="../../praktek_ibadah.html">
                 <i class="icon">
-                  <img class="icon-20" src="../assets/icon/sidebar/praktek.png" style="opacity: 70%;">
+                  <img class="icon-20" src="../../../assets/icon/sidebar/praktek.png" style="opacity: 70%;">
                 </i>
                 <span class="item-name">Praktek Ibadah</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/jadwal_solat.html">
+              <a class="nav-link" href="../../jadwal_solat.html">
                 <i class="icon">
-                  <img class="icon-20" src="../assets/icon/sidebar/jadwal.png" style="opacity: 70%;">
+                  <img class="icon-20" src="../../../assets/icon/sidebar/jadwal.png" style="opacity: 70%;">
                 </i>
                 <span class="item-name">Waktu Sholat</span>
               </a>
@@ -117,9 +117,9 @@ body_sidebar.insertAdjacentHTML('beforeend', `
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/tentang.html">
+              <a class="nav-link" href="../../tentang.html">
                 <i class="icon">
-                  <img class="icon-20" src="../assets/icon/sidebar/tentang.png" style="opacity: 70%" />
+                  <img class="icon-20" src="../../../assets/icon/sidebar/tentang.png" style="opacity: 70%" />
                 </i>
                 <span class="item-name">Tentang Kami</span>
               </a>
